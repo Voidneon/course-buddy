@@ -9,12 +9,10 @@ from supabase import create_client
 
 # CONFIG
 
-load_dotenv()
-url = os.environ.get("SUPABASE_URL")
-key = os.environ.get("SUPABASE_KEY")
+SUPABASE_URL = "https://yalejerenkwsginegaax.supabase.co"
+SUPABASE_KEY = "sb_secret_VQWVY5qONGmTQtE_6zeTOQ_buga429v"
+supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
-
-supabase = create_client(url, key)
 
 # ----------------------------
 # UTILITIES

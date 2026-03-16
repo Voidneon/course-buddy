@@ -9,11 +9,11 @@ from supabase import create_client
 # CONFIG (Same as your import script)
 
 load_dotenv()
-url = os.environ.get("SUPABASE_URL")
-key = os.environ.get("SUPABASE_KEY")
+from supabase import create_client
+SUPABASE_URL = "https://yalejerenkwsginegaax.supabase.co"
+SUPABASE_KEY = "sb_secret_VQWVY5qONGmTQtE_6zeTOQ_buga429v"
+supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
-
-supabase = create_client(url, key)
 def get_year_level(code):
     """
     Guesses year level based on the first digit found in the code.
